@@ -1,0 +1,13 @@
+﻿@model Test.Models.ExampleModel
+
+<form class="form" action="@Url.Action("Index", "Home")">
+    <div>
+        <span class="user">Name</span><input type="text" class="user-input" name="name" required />
+        <input type="submit" class="submit-button" />
+    </div>
+</form>
+
+@if(Model != null)
+{
+    <p>@Model.Name</p>
+}
