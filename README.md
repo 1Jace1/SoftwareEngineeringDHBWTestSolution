@@ -32,14 +32,15 @@ The View, which will provide the form and is located in the Home folder will loo
     
  @model Test.Models.ExampleModel //This will initialize the model in the view and lets us use it.
 
-<form class="form" action="@Url.Action("Index", "Home")"> //The Url.Action will post the name into the controller method. ATTENTION: the "name" attribute has to have the same name as the string in the ActionResult method.
+<form class="form" action="@Url.Action("Index", "Home")"> 
+/*The Url.Action will post the name into the controller method. ATTENTION: the "name" attribute has to have the same name as the string in the ActionResult method.*/
     <div>
         <span class="user">Name</span><input type="text" class="user-input" name="name" required />
         <input type="submit" class="submit-button" />
     </div>
 </form>
 
-//If you use a model it is wise to check it if it has any data in it, if you dont do that you will receive a System.NullreferenceException.
+/*If you use a model it is wise to check it if it has any data in it, if you dont do that you will receive a System.NullreferenceException.*/
 @if(Model != null)
 {
     <p>@Model.Name</p>
